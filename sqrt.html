@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html> 
+	<head>
+	
+		<script>
+			function run() {
+				var root=prompt("root");
+				for (var a=0; a<10; a++) {
+				
+				var init=Math.random()*1000;
+					document.write("When initial guess is: "+init);
+				for (var x=0; x<200; x++){
+				init=0.5*(init+root/init);
+				}
+				document.write(" The root approximation for "+root+" is: "+init+"<br>");
+				}
+			}
+			run();
+		</script>
+		
+	</head>
+</html>
