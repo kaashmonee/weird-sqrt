@@ -2,21 +2,33 @@
 <html> 
 	<head>
 	
+		<label>Enter value to sqrt: </label>
+		<input type="text" id="txtfield"><br>
+		
+	
+		<button onclick="run()">Submit</button><br>
+		
 		<script>
 			function run() {
-				var root=prompt("root");
+				
+				var root=document.getElementById("txtfield").value;
+				
+				document.getElementById("p").innerHTML="";
 				for (var a=0; a<10; a++) {
 				
 				var init=Math.random()*1000;
-					document.write("When initial guess is: "+init);
+					document.getElementById("p").innerHTML+=("When initial guess is: "+init);
 				for (var x=0; x<200; x++){
 				init=0.5*(init+root/init);
 				}
-				document.write(" The root approximation for "+root+" is: "+init+"<br>");
+				document.getElementById("p").innerHTML+=(" The root approximation for "+root+" is: "+init+"<br>");
 				}
+				
 			}
-			run();
+			
 		</script>
+		<p id="p"></p>
 		
 	</head>
+	
 </html>
